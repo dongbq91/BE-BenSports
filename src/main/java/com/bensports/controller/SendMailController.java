@@ -4,23 +4,18 @@
  * @author DongTHD
  * @date Mar 10, 2022
 */
-package com.bensports.api;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+package com.bensports.controller;
 
 import com.bensports.repository.UserRepository;
 import com.bensports.service.SendMailService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
 @RestController
 @RequestMapping("api/send-mail")
-public class SendMailApi {
+public class SendMailController {
 
 	@Autowired
 	SendMailService sendMail;

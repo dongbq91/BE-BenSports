@@ -4,28 +4,21 @@
  * @author DongTHD
  * @date Mar 10, 2022
 */
-package com.bensports.api;
+package com.bensports.controller;
+
+import com.bensports.entity.Notification;
+import com.bensports.repository.NotificationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.bensports.entity.Notification;
-import com.bensports.repository.NotificationRepository;
-
 @RestController
 @CrossOrigin("*")
 @RequestMapping("api/notification")
-public class NotificationApi {
+public class NotificationController {
 
 	@Autowired
 	NotificationRepository notificationRepository;

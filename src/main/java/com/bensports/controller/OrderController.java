@@ -4,38 +4,22 @@
  * @author DongTHD
  * @date Mar 10, 2022
 */
-package com.bensports.api;
+package com.bensports.controller;
+
+import com.bensports.entity.*;
+import com.bensports.repository.*;
+import com.bensports.utils.SendMailUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.bensports.entity.Cart;
-import com.bensports.entity.CartDetail;
-import com.bensports.entity.Order;
-import com.bensports.entity.OrderDetail;
-import com.bensports.entity.Product;
-import com.bensports.repository.CartDetailRepository;
-import com.bensports.repository.CartRepository;
-import com.bensports.repository.OrderDetailRepository;
-import com.bensports.repository.OrderRepository;
-import com.bensports.repository.ProductRepository;
-import com.bensports.repository.UserRepository;
-import com.bensports.utils.SendMailUtil;
-
 @CrossOrigin("*")
 @RestController
 @RequestMapping("api/orders")
-public class OrderApi {
+public class OrderController {
 
 	@Autowired
 	OrderRepository orderRepository;

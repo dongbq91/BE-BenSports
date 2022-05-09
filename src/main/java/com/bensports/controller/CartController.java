@@ -4,27 +4,20 @@
  * @author DongTHD
  * @date Mar 10, 2022
 */
-package com.bensports.api;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+package com.bensports.controller;
 
 import com.bensports.entity.Cart;
 import com.bensports.repository.CartDetailRepository;
 import com.bensports.repository.CartRepository;
 import com.bensports.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
 @RestController
 @RequestMapping("api/cart")
-public class CartApi {
+public class CartController {
 
 	@Autowired
 	CartRepository cartRepository;

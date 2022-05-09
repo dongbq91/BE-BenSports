@@ -4,26 +4,21 @@
  * @author DongTHD
  * @date Mar 10, 2022
 */
-package com.bensports.api;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+package com.bensports.controller;
 
 import com.bensports.entity.OrderDetail;
 import com.bensports.repository.OrderDetailRepository;
 import com.bensports.repository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin("*")
 @RestController
 @RequestMapping("api/orderDetail")
-public class OderDetailApi {
+public class OderDetailController {
 
 	@Autowired
 	OrderDetailRepository orderDetailRepository;
